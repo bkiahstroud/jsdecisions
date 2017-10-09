@@ -98,6 +98,10 @@ function hiLo () {
   var numAnswer = parseInt(Math.random() * 100);
   var count = 1;
   var userNum = prompt("Please enter your guess" , "Enter here");
+  if (userNum == "exitgame") {
+    alert("You have exited the game.")
+    return 0;
+  }
   if (userNum >= 101 || userNum <= 0) {
     alert("Invalid Input!")
     return 0;
@@ -107,6 +111,10 @@ function hiLo () {
     return 0;
   }
   while (count < 7) {
+    if (userNum == "exitgame") {
+      alert("You have exited the game.")
+      return 0;
+    }
     if (userNum == numAnswer) {
       alert("You got it, " + userName + "!")
       return "You win!";
